@@ -1,0 +1,144 @@
+AU Mic
+CoRoT-24
+EPIC 212737443
+GJ 143
+GJ 414 A
+GJ 9827
+HD 106315
+HD 136352
+HD 152843
+HD 159868
+HD 163607
+HD 191939
+HD 219134
+HD 23472
+HD 3167
+HD 33142
+HD 38677
+HD 63935
+HD 73583
+KOI-1783
+EPIC 220674823
+K2-133
+K2-138
+K2-141 
+K2-146
+K2-155
+K2-19
+K2-199
+K2-229
+K2-233
+K2-239
+K2-24
+K2-240
+K2-266
+K2-285
+K2-290
+K2-3
+EPIC 249893012
+K2-32
+K2-36
+K2-38
+KOI-1599
+Kepler-10
+Kepler-100
+Kepler-101
+Kepler-102
+Kepler-103
+Kepler-105
+Kepler-106
+Kepler-107
+Kepler-109
+Kepler-11
+Kepler-113
+Kepler-114
+Kepler-117
+Kepler-128
+Kepler-131
+Kepler-138
+Kepler-145
+Kepler-167
+Kepler-1705
+Kepler-177
+Kepler-18
+Kepler-20
+Kepler-223
+Kepler-23
+Kepler-238
+Kepler-24
+Kepler-25
+Kepler-26
+Kepler-27
+Kepler-276
+Kepler-277
+Kepler-278
+Kepler-279
+Kepler-28
+Kepler-282
+Kepler-289
+Kepler-29
+Kepler-30
+Kepler-305
+Kepler-338
+Kepler-307
+Kepler-31
+Kepler-32
+Kepler-328
+Kepler-350
+Kepler-36
+Kepler-37
+Kepler-396
+Kepler-406
+Kepler-411
+Kepler-414
+Kepler-42
+Kepler-445
+Kepler-446
+Kepler-462
+Kepler-48
+Kepler-49
+Kepler-50
+Kepler-51
+Kepler-52
+Kepler-53
+Kepler-54
+Kepler-55
+Kepler-56
+Kepler-57
+Kepler-58
+Kepler-59
+Kepler-595
+Kepler-60
+Kepler-62
+Kepler-68
+Kepler-79
+Kepler-80
+Kepler-82
+Kepler-85
+Kepler-87
+KOI-94
+Kepler-9
+Kepler-92
+L 98-59
+LHS 1140
+LHS 1678
+LTT 1445A
+LTT 3780
+TOI-1238
+TOI-125
+TOI-1260
+TOI-1266
+TOI-178
+TOI-216
+TOI-270
+TOI-402
+TOI-421
+TOI-431
+TOI-561
+TOI-700
+TOI-712
+TOI-763
+TOI-776
+TOI-942
+TRAPPIST-1
+WASP-47

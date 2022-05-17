@@ -4,7 +4,7 @@
 
 For retrieving information from working databases initially we need a list of potentially interesting systems, which can be formed by following script: `systems-min2planets-withMassSinAndRadius.py`.
 
-This script allows to retrieve star names for the systems where at least two planets have both mass and radius defined by fetching parameter `star_name` from Exoplanet.eu database.
+This script allows to retrieve star names for the systems, where at least two planets have both mass and radius defined, by fetching parameter `star_name` from Exoplanet.eu database.
 
 ``` sh
 $ python ./systems-min2planets-withMassSinAndRadius.py
@@ -18,7 +18,7 @@ For retrieving the whole information about the system in interest, you can run `
 $ ./task-manager.sh
 ```
 
-At this stage you could visualise systems, you can run `task-manager-charts.sh`, which will work through the planetary systems files  `"system name".pkl` in the folder `./data/systems_for_chart` using the other script `one-system-charts_hz.py`, and making figures for Habitable zone edges [1] and mass-radius diagrams for every individual planetary system. There are the examples for TOI-178 system:
+At this stage you could visualise systems, you can run `task-manager-charts.sh`, which will work through the planetary systems files  `"system name".pkl` in the folder `./data/systems_for_chart` using the other script `one-system-charts_hz.py`, and making figures for Habitable zone edges [1] and mass-radius diagrams [2] for every individual planetary system. There are the examples for TOI-178 system:
 
 ![](./img/TOI-178_with_HZ_edges.png)
 

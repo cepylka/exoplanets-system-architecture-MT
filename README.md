@@ -18,7 +18,13 @@ For retrieving the whole information about the system in interest, you can run `
 $ ./task-manager.sh
 ```
 
-At this stage you could visualise systems, and for that you would need data of solar system planets. The shell script you can run, `task-manager-charts.sh`, will load it from the folder `./data/solarsystem.pkl` and the interior curves data file `curves.txt` (Zeng et al, 2019). This script will work through the planetary systems files  `"system name".pkl` in the folder `./data/systems_for_chart/` using the other script `one-system-charts_hz.py`, and making figures for Habitable zone edges [1] and mass-radius diagrams [2] for every individual planetary system. There are the examples for Kepler-107 system:
+At this stage you could visualise systems, and for that you would need data of solar system planets. The shell script you can run, `task-manager-charts.sh`, will load it from the folder `./data/solarsystem.pkl` and the interior curves data file `curves.txt` (Zeng et al, 2019).
+
+``` sh
+$ ./task-manager-charts.sh
+```
+
+This script will work through the planetary systems files  `"system name".pkl` in the folder `./data/systems_for_chart/` using the other script `one-system-charts_hz.py`, and making figures for Habitable zone edges [1] and mass-radius diagrams [2] for every individual planetary system. There are the examples for Kepler-107 system:
 
 ![](./img/Kepler-107_with_HZ_edges.png)
 
@@ -27,6 +33,10 @@ At this stage you could visualise systems, and for that you would need data of s
 The HZ edges are calculated according to Kopparapu et al., 2014.
 
 In order to further investigate the data you need to concatenate all chosen system files to one, with which the certain jupyter notebooks will work, also this combined file in `.pkl` form will be needed to create working files for internal systems structure analyses. You can do the concatenation by running the script `merg-edges.py`, but you need to put all needed system's `.pkl` in the folder `./merg` first. The script creates file `all_my_systems.pkl`.
+
+``` python
+$ python ./merg-edges.py
+```
 
 In aforementioned folders: `./data`, `./data/systems_for_chart/`, `./merg` I put example planetary system .pkl files for checking how the scripts work. After doing the routine from the start, you will obtain such files of the new systems that meet your selection criteria. You can aso make your own file tree for your convenience, but do not forget to change paths if you do.
 

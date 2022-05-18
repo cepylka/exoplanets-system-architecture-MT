@@ -34,7 +34,7 @@ The HZ edges are calculated according to Kopparapu et al., 2014.
 
 In order to further investigate the data you need to concatenate all chosen system files to one, with which the certain jupyter notebooks will work, also this combined file in `.pkl` form will be needed to create working files for internal systems structure analyses. You can do the concatenation by running the script `merg-edges.py`, but you need to put all needed system's `.pkl` in the folder `./merg` first. The script creates file `all_my_systems.pkl`.
 
-``` python
+``` sh
 $ python ./merg-edges.py
 ```
 
@@ -46,7 +46,9 @@ In aforementioned folders: `./data`, `./data/systems_for_chart/`, `./merg` I put
 
 For analysing "peas in the pod" tendency among masses and radii of adjacent planets in the system, you can create a new `.pkl` file from existing sample file `all_my_systems.pkl` by using `pairs_MRP_stellar.py`, which you can run in the terminal.
 
-`python ./pairs_MRP_stellar.py`
+``` sh
+$ python ./pairs_MRP_stellar.py
+```
 
 It will write a new file `MRP_data_sets.pkl` in the `data` folder. The file consists now paired data for two adjacent planets in the system as one row in the pandas data frame.
 

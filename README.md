@@ -18,13 +18,17 @@ For retrieving the whole information about the system in interest, you can run `
 $ ./task-manager.sh
 ```
 
-At this stage you could visualise systems, you can run `task-manager-charts.sh`, which will work through the planetary systems files  `"system name".pkl` in the folder `./data/systems_for_chart` using the other script `one-system-charts_hz.py`, and making figures for Habitable zone edges [1] and mass-radius diagrams [2] for every individual planetary system. There are the examples for TOI-178 system:
+At this stage you could visualise systems, and for that you would need data of solar system planets. The shell script you can run, `task-manager-charts.sh`, will load it from the folder `./data/solarsystem.pkl` and the interior curves data file `curves.txt` (Zeng et al, 2019). This script will work through the planetary systems files  `"system name".pkl` in the folder `./data/systems_for_chart/` using the other script `one-system-charts_hz.py`, and making figures for Habitable zone edges [1] and mass-radius diagrams [2] for every individual planetary system. There are the examples for Kepler-107 system:
 
-![](./img/TOI-178_with_HZ_edges.png)
+![](./img/Kepler-107_with_HZ_edges.png)
 
-![](./img/TOI-178.png)
+![](./img/Kepler-107.png)
 
-in order to further investigate the data you need to concatenate all chosen system files to one, with which the certain jupyter notebooks will work, also this combined file in `.pkl` form will be needed to create working files for internal systems structure analyses. You can do the concatenation by running the script `merg-edges.py`, but you need to put all needed system's `.pkl` in the folder `./merg` first. The script creates file `all_my_systems.pkl`.
+The HZ edges are calculated according to Kopparapu et al., 2014.
+
+In order to further investigate the data you need to concatenate all chosen system files to one, with which the certain jupyter notebooks will work, also this combined file in `.pkl` form will be needed to create working files for internal systems structure analyses. You can do the concatenation by running the script `merg-edges.py`, but you need to put all needed system's `.pkl` in the folder `./merg` first. The script creates file `all_my_systems.pkl`.
+
+In aforementioned folders: `./data`, `./data/systems_for_chart/`, `./merg` I put example planetary system .pkl files for checking how the scripts work. After doing the routine from the start, you will obtain such files of the new systems that meet your selection criteria. You can aso make your own file tree for your convenience, but do not forget to change paths if you do.
 
 ## Analyses of the sample
 
@@ -45,3 +49,13 @@ $ python ./triples_MRPD.py
 ```
 
 It will write a new file `triples_MR.pkl` in the `data` folder. The file consists now data for three adjacent planets in the system as one row in the pandas data frame.
+
+
+References:
+
+Kopparapu, R. K., Ramirez, R. M., SchottelKotte, J., Kasting, J. F., Domagal-Goldman,
+S. and Eymet, V. (2014). ‘Habitable zones around main-sequence stars: dependence
+on planetary mass’. In: The Astrophysical Journal Letters vol. 787, no. 2, p. L29.
+
+Zeng, L., Jacobsen, S. B., Sasselov, D. D., Petaev, M. I., Vanderburg, A., Lopez-Morales,
+M., Perez-Mercader, J., Mattsson, T. R., Li, G., Heising, M. Z. et al. (2019). ‘Growth model interpretation of planet size distribution’. In: Proceedings of the National Academy of Sciences vol. 116, no. 20, pp. 9723–9728.

@@ -77,7 +77,7 @@ It will write a new file `triples_MR.pkl` in the `data` folder. The file consist
 
 References:
 
-<a name="#Kopparapu"></a> Kopparapu, R. K., Ramirez, R. M., SchottelKotte, J., Kasting, J. F., Domagal-Goldman,
+<a name="Kopparapu"></a> Kopparapu, R. K., Ramirez, R. M., SchottelKotte, J., Kasting, J. F., Domagal-Goldman,
 S. and Eymet, V. (2014). ‘Habitable zones around main-sequence stars: dependence
 on planetary mass’. In: The Astrophysical Journal Letters vol. 787, no. 2, p. L29.
 

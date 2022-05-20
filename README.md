@@ -18,7 +18,7 @@ For retrieving the whole information about the system in interest, you can run `
 $ ./task-manager.sh
 ```
 
-At this stage you could visualise systems, and for that you would need data of solar system planets. The shell script you can run, `task-manager-charts.sh`, will load it from the folder `./data/solarsystem.pkl` and the interior curves data file `curves.txt` [Zeng et al, 2019](#Zeng).
+At this stage you could visualise systems, and for that you would need data of solar system planets. The shell script you can run, `task-manager-charts.sh`, will load it from the folder `./data/solarsystem.pkl` and the interior curves data file `curves.txt` from [Zeng et al, 2019](#Zeng).
 
 ``` sh
 $ ./task-manager-charts.sh
@@ -52,27 +52,39 @@ $ python ./pairs_MRP_stellar.py
 
 It will write a new file `MRP_data_sets.pkl` in the `data` folder. The file consists now paired data for two adjacent planets in the system as one row in the pandas data frame.
 
-For analyses of similarity in parameters of adjacent planets depend on stellar parameters you can use the following script: `MRD_adjacent_planets.py`.
+For analyses of similarity in parameters of adjacent planet pairs and its depending on stellar parameters you can use the following script: `MRD_adjacent_planets.py`.
 
 ``` sh
 $ python ./MRD_adjacent_planets.py
 ```
 
-First, this script will create general plots for parameters: mass, radius, and density, and for two populations: P$_i$ for the inner planet in the pair of adjacent planets, P$_{i+1}$ for the outer planet in this pair, where P is one of the parameters. The Pearson correlation test will be conducted and R- and P-values will be calculated, and the result will be output to stdout.
+First, this script will create general plots for parameters: mass, radius, and density, and for two populations: P<sub>i</sub>for the inner planet in the pair of adjacent planets, P<sub>i+1</sub> for the outer planet in this pair, where P is one of the parameters. The Pearson correlation test will be conducted and R- and P-values will be calculated, and the result will be output to stdout.
 
-Then, the script calculates the Pearson coefficient distributions for the Monte Carlo random uniform sampling populations from error intervals, and resulting figures will represent R- and P-values distributions, the normal distribution function fitting, the mean and median coefficient values and the standard deviation $\sigma$.
+Then, the script calculates the Pearson coefficient distributions for the Monte Carlo random uniform sampling populations from error intervals (10<sup>5</sup> attempts), and resulting figures will represent R- and P-values distributions, the normal distribution function fitting. And the mean and median coefficient values and the standard deviation $\sigma$ value will be printed in every figure.
 
-The script put all figures in .png and .svg formats in the same folder, from what it has been run.
+In the third part, the script will make "moving window" test for different stellar parameters for sub-samples of x=40 data points with n=2 step. It will produce graphs of R- and P-value dynamics in stellar mass, radius, metallicity, T<sub>eff</sub> and age ranges.
 
-designated folders in the working folder, where they will store plots and `.pkl` files for planets pairs divided in chunks by stellar parameters. For example, planets with specified host star effective temperature will be in 3 separated groups: less 4200 K, between 4200 and 5500 K, more than 5500 K. By editing the scripts, you can choose mass/radius precision by trimming the data, for example 0.3 will represent 30% error allowed, and the borders of the groups, for example: low metallicity as less than -0.09, solar metallicity between -0.09.
 
-For analysing periods ratio and dynamical stability of adjacent planets in the system, you can create a new `.pkl` file from existing sample file `all_my_systems.pkl` by using `triples_MRPD.py`, which you can run in the terminal.
+For analysing periods ratio, you can create a new `.pkl` file from existing sample file `all_my_systems.pkl` by using `triples_MRPD.py`, which you can run in the terminal.
 
 ``` sh
 $ python ./triples_MRPD.py
 ```
 
 It will write a new file `triples_MR.pkl` in the `data` folder. The file consists now data for three adjacent planets in the system as one row in the pandas data frame.
+
+For analyses of similarity in parameters of adjacent planet triples, and how theses similarity trends depend on stellar parameters you can use the following script: `P_adjacent_planets.py`.
+
+``` sh
+$ python ./P_adjacent_planets.py
+```
+
+Analogously with the script for masses, radii and densities (`MRD_adjacent_planets.py`), the `P_adjacent_planets.py` script calculates R- and P-values and output to stdout, creates general plots for period ratios, and for two populations: P<sub>i+1</sub>/P<sub>i</sub> for the inner planet in the pair of adjacent planets, P<sub>i+2</sub>/P<sub>i+1</sub>  for the outer planet in this pair, where P is the orbital period.
+
+Second, the script calculates the Pearson coefficient distributions from random uniform simulations from error intervals (10<sup>5</sup> attempts), and plots figures of R- and P-values distributions, the normal distribution function fitting along with the mean and median coefficient values and the standard deviation $\sigma$ value.
+
+After that, the script will make "moving window" test for different stellar parameters for sub-samples of x=40 data points with n=2 step. It will produce graphs of R- and P-value dynamics in stellar mass, radius, metallicity, T<sub>eff</sub> and age ranges.
+
 
 
 References:

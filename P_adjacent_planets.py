@@ -3,6 +3,7 @@ import numpy
 from tabulate import tabulate
 import pandas
 import warnings
+warnings.simplefilter(action="ignore", category=FutureWarning)
 import matplotlib
 warnings.filterwarnings("ignore", category=UserWarning)
 pandas.options.mode.use_inf_as_na = True

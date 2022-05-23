@@ -42,7 +42,7 @@ In aforementioned folders: `./data`, `./data/systems_for_chart/`, `./merg` I put
 
 ## Analyses of the sample
 
-### System architecture: masses, radii similarities
+### System architecture: planet parameters similarities
 
 For analysing "peas in the pod" tendency among masses and radii of adjacent planets in the system, you can create a new `.pkl` file from existing sample file `all_my_systems.pkl` by using `pairs_MRP_stellar.py`, which you can run in the terminal.
 

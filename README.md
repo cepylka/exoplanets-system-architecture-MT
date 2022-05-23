@@ -58,7 +58,7 @@ For analyses of similarity in parameters of adjacent planet pairs and its depend
 $ python ./MRD_adjacent_planets.py
 ```
 
-First, this script will create general plots for parameters: mass, radius, and density, and for two populations: P<sub>i</sub>for the inner planet in the pair of adjacent planets, P<sub>i+1</sub> for the outer planet in this pair, where P is one of the parameters. The Pearson correlation test will be conducted and R- and P-values will be calculated, and the result will be output to stdout.
+First, this script will create general plots for parameters: mass, radius, and density, and for two populations: P<sub>i</sub> for the inner planet in the pair of adjacent planets, P<sub>i+1</sub> for the outer planet in this pair, where P is one of the parameters and i=1,2 for first and second planet in the system by ascending of their semi-major axis. Note, that one system can produce multiple pairs, if it has more that 2 planets with well-defined parameters. The Pearson correlation test will be conducted and R- and P-values will be calculated, and the result along with the ordering in pairs calculations will be output to stdout.
 
 Then, the script calculates the Pearson coefficient distributions for the Monte Carlo random uniform sampling populations from error intervals (10<sup>5</sup> attempts), and resulting figures will represent R- and P-values distributions, the normal distribution function fitting. And the mean and median coefficient values and the standard deviation $\sigma$ value will be printed in every figure.
 
@@ -73,13 +73,13 @@ $ python ./triples_MRPD.py
 
 It will write a new file `triples_MR.pkl` in the `data` folder. The file consists now data for three adjacent planets in the system as one row in the pandas data frame.
 
-For analyses of similarity in parameters of adjacent planet triples, and how theses similarity trends depend on stellar parameters you can use the following script: `P_adjacent_planets.py`.
+For analyses of similarity in parameters of adjacent planet triples, and for assessing how these similarity trends depend on stellar parameters, you can use the following script: `P_adjacent_planets.py`.
 
 ``` sh
 $ python ./P_adjacent_planets.py
 ```
 
-Analogously with the script for masses, radii and densities (`MRD_adjacent_planets.py`), the `P_adjacent_planets.py` script calculates R- and P-values and output to stdout, creates general plots for period ratios, and for two populations: P<sub>i+1</sub>/P<sub>i</sub> for the inner planet in the pair of adjacent planets, P<sub>i+2</sub>/P<sub>i+1</sub>  for the outer planet in this pair, where P is the orbital period.
+Analogously with the script for masses, radii and densities (`MRD_adjacent_planets.py`), the `P_adjacent_planets.py` script calculates R- and P-values and output to stdout, creates general plots for period ratios, and for two populations: P<sub>i+1</sub>/P<sub>i</sub> for the inner planet pair of adjacent planets, P<sub>i+2</sub>/P<sub>i+1</sub>  for the outer planet pair, where P is the orbital period and i=1,2,3 for first, second and third planet in the system by ascending of their semi-major axis. Note, that one system can produce multiple triples, if it has more that 3 planets with well-defined parameters.
 
 Second, the script calculates the Pearson coefficient distributions from random uniform simulations from error intervals (10<sup>5</sup> attempts), and plots figures of R- and P-values distributions, the normal distribution function fitting along with the mean and median coefficient values and the standard deviation $\sigma$ value.
 
@@ -89,9 +89,7 @@ After that, the script will make "moving window" test for different stellar para
 
 References:
 
-<a name="Kopparapu"></a> Kopparapu, R. K., Ramirez, R. M., SchottelKotte, J., Kasting, J. F., Domagal-Goldman,
-S. and Eymet, V. (2014). ‘Habitable zones around main-sequence stars: dependence
-on planetary mass’. In: The Astrophysical Journal Letters vol. 787, no. 2, p. L29.
+<a name="Kopparapu"></a> Kopparapu, R. K., Ramirez, R. M., SchottelKotte, J., Kasting, J. F., Domagal-Goldman, S. and Eymet, V. (2014). "Habitable zones around main-sequence stars: dependence
+on planetary mass". In: The Astrophysical Journal Letters vol. 787, no. 2, p. L29.
 
-<a name="Zeng"></a> Zeng, L., Jacobsen, S. B., Sasselov, D. D., Petaev, M. I., Vanderburg, A., Lopez-Morales,
-M., Perez-Mercader, J., Mattsson, T. R., Li, G., Heising, M. Z. et al. (2019). ‘Growth model interpretation of planet size distribution’. In: Proceedings of the National Academy of Sciences vol. 116, no. 20, pp. 9723–9728.
+<a name="Zeng"></a> Zeng, L., Jacobsen, S. B., Sasselov, D. D., Petaev, M. I., Vanderburg, A., Lopez-Morales, M., Perez-Mercader, J., Mattsson, T. R., Li, G., Heising, M. Z. et al. (2019). "Growth model interpretation of planet size distribution". In: Proceedings of the National Academy of Sciences vol. 116, no. 20, pp. 9723–9728.

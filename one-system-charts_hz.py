@@ -52,7 +52,7 @@ curves = pandas.read_fwf("./data/curves_all.txt", index_col=0)#, header=None)
 
 print("[1/2] Making charts #1...")
 # solar system data
-solarsystemTable1 = pandas.read_pickle("./data/solarsystem.pkl")
+solarsystemTable1 = pandas.read_pickle("./data/solarsystemE.pkl")
 for index, row in workingTableExoplanets.iterrows():
     if not pandas.isnull(row["semi_major_axis"]):
         continue
